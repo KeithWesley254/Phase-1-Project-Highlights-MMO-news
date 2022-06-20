@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+#Introduction{
+    background: rgb(24, 23, 23);
+}
+#MainTitle{
+    text-align: center;
+    padding-top: 15px;
+    color: rgb(252, 118, 1);
+    font-size: 40px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.logo{
+    color: rgb(45, 244, 39);
+    font-size: 28px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.logoSpan{
+    color: rgb(252, 118, 1);
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+nav ul li a{
+    color: rgb(4, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    color: rgb(250, 250, 4);
+    transition: .5s;
+}
+.donate{
+    background-color: rgb(45, 244, 39);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+.donate:hover{
+    transform: scale(1.2);
+}
+
+.MainNews{
+    display: flex;
+    width: 100%;
+    height: 38px;
+    background: #20c0ff;
+    align-items: center;
+    border-bottom-right-radius: 30px;
+}
+.dateScroll{
+    display: inline;
+    text-decoration: none;
+    color: rgba(78, 105, 133, 0.7);
+}
+.newsScroll{
+    display: inline;
+    padding: 10px 40px;
+}
+
+.newsScroll a{
+    display: inline;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+}
+.newsMouth{
+    width: 160px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(254, 7, 7);
+    border-bottom-right-radius: 30px;
+}
