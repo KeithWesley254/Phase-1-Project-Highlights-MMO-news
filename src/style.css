@@ -78,7 +78,7 @@ nav ul li a:hover{
     padding: 10px 40px;
 }
 
-.newsScroll a{
+.miniNews{
     display: inline;
     text-decoration: none;
     color: rgb(5, 5, 5);
@@ -175,7 +175,7 @@ nav ul li a:hover{
     left: 10px;
     width: 48%;
     height: 100%;
-    background: rgb(18, 243, 255);
+    background: rgb(0, 0, 0);
     border-radius: 80px;
 }
 .free2play{
@@ -184,41 +184,30 @@ nav ul li a:hover{
     border-radius: 80px;
     width: 48%;
     height: 100%;
-    background: rgb(18, 243, 255);
+    background: rgb(0, 0, 0);
 }
 .mmo-news h2{
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: rgb(14, 15, 14);
+    color: rgb(18, 243, 255);
 }
 .newsSpan{
     color: rgb(215, 95, 15);
 }
 .mmo-content{
     text-align: center;
-    border: 5px solid black;
+    border: 5px solid rgb(5, 5, 5);
     height: 85%;
     border-radius: 50px;
     background: rgb(77, 75, 75);;
     overflow-y: scroll;
 }
-.mmo-content::-webkit-scrollbar{
-    width: 7px;
-}
-.mmo-content::-webkit-scrollbar-track{
-    background: rgb(247, 247, 247);
-    border-radius: 50px;
-}
-.mmo-content::-webkit-scrollbar-thumb{
-    background: rgb(215, 95, 15);
-    border-radius: 50px;
-}
 .free2play h2{
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    color: rgb(24, 23, 23);
+    color: rgb(18, 243, 255);
 }
 .f2p{
     color: rgb(215, 95, 15);
@@ -230,15 +219,19 @@ nav ul li a:hover{
     text-align: center;
     height: 85%;
     background: rgb(77, 75, 75);
+    overflow-y: scroll;
 }
-.listofgames::-webkit-scrollbar{
-    width: 7px;
+.gameUrl{
+    text-decoration: none;
+    color: rgb(215, 95, 15);
+    transition: .5s;
 }
-.listofgames::-webkit-scrollbar-track{
-    background: rgb(247, 247, 247);
-    border-radius: 50px;
+.gameUrl:hover{
+    color: rgb(245, 39, 39);
 }
-.listofgames::-webkit-scrollbar-thumb{
-    background: rgb(215, 95, 15);
-    border-radius: 50px;
+.listofgames h3{
+    color: rgb(215, 95, 15);
+}
+.listofgames p{
+    color: rgb(18, 243, 255);
 }
