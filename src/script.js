@@ -1,6 +1,6 @@
 const myListedVideos = document.querySelectorAll('.video-list .vid')
 const mainVideo = document.querySelector('.main-video video')
-const title = document.querySelectorAll('.main-video .video-title')
+const title = document.querySelectorAll('.video-title')
 const allVids = document.querySelector('.video-list video')
 const listOfGames = document.querySelector('.listofgames')
 const devName = document.querySelector('.DevName')
@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded',() => {
         video.onclick = () => {
             myListedVideos.forEach(vid => vid.classList.remove('active'))
             video.classList.add('active')
-            if(video.classList === 'active'){
+            if(video.classList.contains('active')){
                 let src = video.children[0].getAttribute('src');
                 mainVideo.src = src;
-                let text = video.children[1].innerHTML;
-                title.innerHTML = text
+                let writing = video.children[1].innerHTML;
+                title.innerHTML = writing
             }
         }
     })
