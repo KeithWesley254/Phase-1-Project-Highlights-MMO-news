@@ -13,6 +13,11 @@ const publisher = document.querySelector('.publisher')
 const gameTitle = document.querySelector('.gameTitle')
 const miniNews = document.querySelector('.miniNews')
 const dateScroll = document.querySelector('.dateScroll')
+const mmoNewsTitle = document.querySelector('.mmoNewsTitle')
+const mmoImg = document.querySelector('.mmoImg')
+const mmoDescription = document.querySelector('.mmoDescription')
+const articleContent = document.querySelector('.articleContent')
+const linkArticle = document.querySelector('.linkArticle')
 
 
 
@@ -92,7 +97,12 @@ function myMMONews(){
             setInterval(function(){
                 const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
                 // console.log(mmoDetails)
-            })
+                mmoNewsTitle.textContent = mmoDetails.title
+                mmoImg.src = mmoDetails.thumbnail
+                mmoDescription.textContent = mmoDetails.short_description
+                articleContent.innerHTML = mmoDetails.article_content
+                linkArticle.href = mmoDetails.article_url
+            }, 50000)
         })
         .catch(err => console.error(err));
 }
