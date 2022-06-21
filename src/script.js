@@ -102,6 +102,7 @@ function myMMONews(){
                 mmoDescription.textContent = mmoDetails.short_description
                 articleContent.innerHTML = mmoDetails.article_content
                 linkArticle.href = mmoDetails.article_url
+                linkArticle.textContent = mmoDetails.article_url
             }, 50000)
         })
         .catch(err => console.error(err));
