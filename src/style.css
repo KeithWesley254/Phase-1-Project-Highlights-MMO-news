@@ -231,3 +231,14 @@ nav ul li a:hover{
     height: 85%;
     background: rgb(77, 75, 75);
 }
+.listofgames::-webkit-scrollbar{
+    width: 7px;
+}
+.listofgames::-webkit-scrollbar-track{
+    background: rgb(247, 247, 247);
+    border-radius: 50px;
+}
+.listofgames::-webkit-scrollbar-thumb{
+    background: rgb(215, 95, 15);
+    border-radius: 50px;
+}
