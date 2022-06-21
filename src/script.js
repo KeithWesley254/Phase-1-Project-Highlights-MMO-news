@@ -24,6 +24,8 @@ const linkArticle = document.querySelector('.linkArticle')
 //DOM Content Loaded
 document.addEventListener('DOMContentLoaded',() => {
     //Video Player Section
+    futaVids()
+    
     myListedVideos.forEach(video => {
         video.onclick = () => {
             myListedVideos.forEach(vid => vid.classList.remove('active'))
@@ -94,16 +96,32 @@ function myMMONews(){
                 const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
                 miniNews.textContent = mmoDetails.title
             }, 30000)
-            setInterval(function(){
-                const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
-                // console.log(mmoDetails)
-                mmoNewsTitle.textContent = mmoDetails.title
-                mmoImg.src = mmoDetails.thumbnail
-                mmoDescription.textContent = mmoDetails.short_description
-                articleContent.innerHTML = mmoDetails.article_content
-                linkArticle.href = mmoDetails.article_url
-                linkArticle.textContent = mmoDetails.article_url
-            }, 50000)
+            // setInterval(function(){
+            //     const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
+            //     // console.log(mmoDetails)
+            //     mmoNewsTitle.textContent = mmoDetails.title
+            //     mmoImg.src = mmoDetails.thumbnail
+            //     mmoDescription.textContent = mmoDetails.short_description
+            //     articleContent.innerHTML = mmoDetails.article_content
+            //     linkArticle.href = mmoDetails.article_url
+            //     linkArticle.textContent = mmoDetails.article_url
+            // }, 50000)
         })
+        .catch(err => console.error(err));
+}
+
+//Football Videos
+function futaVids(){
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'aecf993c34mshd3d18f8add32b27p113fa7jsn644341e81e9c',
+            'X-RapidAPI-Host': 'free-football-soccer-videos.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://free-football-soccer-videos.p.rapidapi.com/', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
         .catch(err => console.error(err));
 }
