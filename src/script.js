@@ -89,6 +89,10 @@ function myMMONews(){
                 const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
                 miniNews.textContent = mmoDetails.title
             }, 30000)
+            setInterval(function(){
+                const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
+                // console.log(mmoDetails)
+            })
         })
         .catch(err => console.error(err));
 }
