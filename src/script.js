@@ -168,7 +168,7 @@ function EpicGamesFree(){
                 effectiveDate.textContent =currGame.effectiveDate
                 epicImg.href = randomImages.url
                 epicStatus.textContent = currGame.status
-            }, 20000)
+            }, 1500000)
         })
         .catch(err => console.error(err));
 }

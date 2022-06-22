@@ -277,3 +277,7 @@ nav ul li a:hover{
     padding-bottom: 20px;
     color: rgb(18, 243, 255);
 }
+.epicImg{
+    text-decoration: none;
+    color: rgb(215, 95, 15);;
+}
