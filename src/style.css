@@ -249,3 +249,31 @@ nav ul li a:hover{
 .linkArticle:hover{
     color: rgb(245, 39, 39);
 }
+.EpicFree{
+    position: absolute;
+    left: 10px;
+    width: 48%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    border-radius: 80px;
+}
+.epicgames{
+    text-align: center;
+    border: 5px solid rgb(5, 5, 5);
+    height: 85%;
+    border-radius: 50px;
+    background: rgb(77, 75, 75);;
+    overflow-y: scroll;
+}
+.epicgames p{
+    color: rgb(18, 243, 255)
+}
+.epicgames h3{
+    color: rgb(215, 95, 15);
+}
+.EpicFree h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(18, 243, 255);
+}

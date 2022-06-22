@@ -2,6 +2,7 @@ const myListedVideos = document.querySelectorAll('.video-list .vid')
 const mainVideo = document.querySelector('.main-video video')
 const title = document.querySelectorAll('.video-title')
 const allVids = document.querySelector('.video-list video')
+
 const listOfGames = document.querySelector('.listofgames')
 const devName = document.querySelector('.DevName')
 const gameUrl = document.querySelector('.gameUrl')
@@ -12,14 +13,21 @@ const dateGames = document.querySelector('.dateGames')
 const platform = document.querySelector('.platform')
 const publisher = document.querySelector('.publisher')
 const gameTitle = document.querySelector('.gameTitle')
+
 const miniNews = document.querySelector('.miniNews')
 const dateScroll = document.querySelector('.dateScroll')
+
 const mmoNewsTitle = document.querySelector('.mmoNewsTitle')
 const mmoImg = document.querySelector('.mmoImg')
 const mmoDescription = document.querySelector('.mmoDescription')
 const articleContent = document.querySelector('.articleContent')
 const linkArticle = document.querySelector('.linkArticle')
 
+const epicTitle = document.querySelector('.epicTitle')
+const epicImg = document.querySelector('.epicImg')
+const epicDescription = document.querySelector('.epicDescription')
+const effectiveDate = document.querySelector('.effectiveDate')
+const epicStatus = document.querySelector('.epicStatus')
 
 
 //DOM Content Loaded
@@ -34,11 +42,11 @@ document.addEventListener('DOMContentLoaded',() => {
             if(video.classList.contains('active')){
                 let src = video.children[0].getAttribute('src');
                 mainVideo.src = src;
-                let writing = video.children[1].innerHTML;
-                title.innerHTML = writing
             }
         }
     })
+
+EpicGamesFree()
 
 f2pGames()
 
@@ -47,6 +55,7 @@ const dateToday = currentDate.getDate()+'/'+(currentDate.getMonth()+1)+'/'+curre
 dateScroll.textContent = dateToday
 
 myMMONews()
+
 
 })
 
@@ -97,40 +106,69 @@ function myMMONews(){
                 const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
                 miniNews.textContent = mmoDetails.title
             }, 30000)
-            setInterval(function(){
-                const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
-                // console.log(mmoDetails)
-                mmoNewsTitle.textContent = mmoDetails.title
-                mmoImg.src = mmoDetails.thumbnail
-                mmoDescription.textContent = mmoDetails.short_description
-                articleContent.innerHTML = mmoDetails.article_content
-                linkArticle.href = mmoDetails.article_url
-                linkArticle.textContent = mmoDetails.article_url
-            }, 50000)
+            // setInterval(function(){
+            //     const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
+            //     // console.log(mmoDetails)
+            //     mmoNewsTitle.textContent = mmoDetails.title
+            //     mmoImg.src = mmoDetails.thumbnail
+            //     mmoDescription.textContent = mmoDetails.short_description
+            //     articleContent.innerHTML = mmoDetails.article_content
+            //     linkArticle.href = mmoDetails.article_url
+            //     linkArticle.textContent = mmoDetails.article_url
+            // }, 50000)
         })
-        // .catch(err => console.error(err));
+        .catch(err => console.error(err));
 }
 
 //Football Videos
-// function futaVids(){
-//     const options = {
-//         method: 'GET',
-//         headers: {
-//             'X-RapidAPI-Key': 'aecf993c34mshd3d18f8add32b27p113fa7jsn644341e81e9c',
-//             'X-RapidAPI-Host': 'free-football-soccer-videos.p.rapidapi.com'
-//         }
-//     };
+function futaVids(){
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'aecf993c34mshd3d18f8add32b27p113fa7jsn644341e81e9c',
+            'X-RapidAPI-Host': 'free-football-soccer-videos.p.rapidapi.com'
+        }
+    };
     
-//     fetch('https://free-football-soccer-videos.p.rapidapi.com/', options)
-//         .then(response => response.json())
-//         .then(vidData => {
-//             console.log(vidData)
+    fetch('https://free-football-soccer-videos.p.rapidapi.com/', options)
+        .then(response => response.json())
+        .then(vidData => {
+            console.log(vidData)
 
-            // setInterval(function(){
-            //     const vidRandom = vidData[Math.floor(Math.random()*vidData.length)]
-            //     console.log(vidRandom)
-            //     mainVideo.src = vidRandom.url
-            // }, 20000)
-//         })
-//         .catch(err => console.error(err));
-// }
+            setInterval(function(){
+                const vidRandom = vidData[Math.floor(Math.random()*vidData.length)]
+                console.log(vidRandom)
+                mainVideo.src = vidRandom.url
+            }, 20000)
+        })
+        .catch(err => console.error(err));
+}
+
+function EpicGamesFree(){
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'aecf993c34mshd3d18f8add32b27p113fa7jsn644341e81e9c',
+            'X-RapidAPI-Host': 'free-epic-games.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://free-epic-games.p.rapidapi.com/free', options)
+        .then(response => response.json())
+        .then(epicGData => {
+            const currDeals = epicGData.freeGames.current
+            const ThyImages = epicGData.freeGames.current[0].keyImages
+            // console.log(ThyImages)
+            setInterval(function(){
+                const currGame = currDeals[Math.floor(Math.random()*currDeals.length)]
+                const randomImages = ThyImages[Math.floor(Math.random()*ThyImages.length)]
+                
+                epicTitle.textContent = currGame.title
+                epicDescription.textContent = currGame.description
+                effectiveDate.textContent =currGame.effectiveDate
+                epicImg.href = randomImages.url
+                epicStatus.textContent = currGame.status
+            }, 20000)
+        })
+        .catch(err => console.error(err));
+}
