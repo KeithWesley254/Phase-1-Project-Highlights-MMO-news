@@ -23,9 +23,10 @@ const mmoDescription = document.querySelector('.mmoDescription')
 const articleContent = document.querySelector('.articleContent')
 const linkArticle = document.querySelector('.linkArticle')
 
-const epicTitle = document.querySelector('.epicTitle')
-const epicImg = document.querySelector('chuckImg')
-const epicDescription = document.querySelector('.epicDescription')
+const epicImg = document.querySelector('.animeImg')
+const rFacts = document.querySelector('.rFacts')
+const rSubtopic = document.querySelector('.rSubtopic')
+const rTopic = document.querySelector('.rTopic')
 
 
 //DOM Content Loaded
@@ -43,7 +44,8 @@ document.addEventListener('DOMContentLoaded',() => {
         }
     })
 
-ChuckNorris()
+AnimeImg()
+randomFacts()
 
 f2pGames()
 
@@ -117,19 +119,40 @@ function myMMONews(){
         .catch(err => console.error(err));
 }
 
-//Chuck Norris Memes
-function ChuckNorris(){
+//Anime Img
+function AnimeImg(){
     const options = {
         method: 'GET',
         headers: {
-            accept: 'application/json',
             'X-RapidAPI-Key': 'aecf993c34mshd3d18f8add32b27p113fa7jsn644341e81e9c',
-            'X-RapidAPI-Host': 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com'
+            'X-RapidAPI-Host': 'any-anime.p.rapidapi.com'
+        }
+    };
+    fetch('https://any-anime.p.rapidapi.com/anime', options)
+    .then(response => response.json())
+    .then(animeData => {
+        const animeManeno = animeData.stuff[0]
+            epicImg.src = animeManeno.image
+    }) .catch(err => console.error(err));
+}
+
+//Random Facts
+function randomFacts(){
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'aecf993c34mshd3d18f8add32b27p113fa7jsn644341e81e9c',
+            'X-RapidAPI-Host': 'random-facts4.p.rapidapi.com'
         }
     };
     
-    fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', options)
+    fetch('https://random-facts4.p.rapidapi.com/get', options)
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(factsData => {
+            console.log(factsData)
+            rFacts.textContent = factsData[0].description
+            rSubtopic.textContent = factsData[0].subtopic
+            rTopic.textContent = factsData[0].topic
+        })
         .catch(err => console.error(err));
 }
