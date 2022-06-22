@@ -24,16 +24,13 @@ const articleContent = document.querySelector('.articleContent')
 const linkArticle = document.querySelector('.linkArticle')
 
 const epicTitle = document.querySelector('.epicTitle')
-const epicImg = document.querySelector('.epicImg')
+const epicImg = document.querySelector('chuckImg')
 const epicDescription = document.querySelector('.epicDescription')
-const effectiveDate = document.querySelector('.effectiveDate')
-const epicStatus = document.querySelector('.epicStatus')
 
 
 //DOM Content Loaded
 document.addEventListener('DOMContentLoaded',() => {
     //Video Player Section
-    // futaVids()
 
     myListedVideos.forEach(video => {
         video.onclick = () => {
@@ -46,7 +43,7 @@ document.addEventListener('DOMContentLoaded',() => {
         }
     })
 
-EpicGamesFree()
+ChuckNorris()
 
 f2pGames()
 
@@ -120,55 +117,19 @@ function myMMONews(){
         .catch(err => console.error(err));
 }
 
-//Football Videos
-function futaVids(){
+//Chuck Norris Memes
+function ChuckNorris(){
     const options = {
         method: 'GET',
         headers: {
+            accept: 'application/json',
             'X-RapidAPI-Key': 'aecf993c34mshd3d18f8add32b27p113fa7jsn644341e81e9c',
-            'X-RapidAPI-Host': 'free-football-soccer-videos.p.rapidapi.com'
+            'X-RapidAPI-Host': 'matchilling-chuck-norris-jokes-v1.p.rapidapi.com'
         }
     };
     
-    fetch('https://free-football-soccer-videos.p.rapidapi.com/', options)
+    fetch('https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random', options)
         .then(response => response.json())
-        .then(vidData => {
-            console.log(vidData)
-
-            setInterval(function(){
-                const vidRandom = vidData[Math.floor(Math.random()*vidData.length)]
-                console.log(vidRandom)
-                mainVideo.src = vidRandom.url
-            }, 20000)
-        })
-        .catch(err => console.error(err));
-}
-
-function EpicGamesFree(){
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'aecf993c34mshd3d18f8add32b27p113fa7jsn644341e81e9c',
-            'X-RapidAPI-Host': 'free-epic-games.p.rapidapi.com'
-        }
-    };
-    
-    fetch('https://free-epic-games.p.rapidapi.com/free', options)
-        .then(response => response.json())
-        .then(epicGData => {
-            const currDeals = epicGData.freeGames.current
-            const ThyImages = epicGData.freeGames.current[0].keyImages
-            // console.log(ThyImages)
-            setInterval(function(){
-                const currGame = currDeals[Math.floor(Math.random()*currDeals.length)]
-                const randomImages = ThyImages[Math.floor(Math.random()*ThyImages.length)]
-                
-                epicTitle.textContent = currGame.title
-                epicDescription.textContent = currGame.description
-                effectiveDate.textContent =currGame.effectiveDate
-                epicImg.href = randomImages.url
-                epicStatus.textContent = currGame.status
-            }, 1500000)
-        })
+        .then(response => console.log(response))
         .catch(err => console.error(err));
 }
