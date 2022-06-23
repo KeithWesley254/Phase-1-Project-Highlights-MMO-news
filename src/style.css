@@ -71,7 +71,7 @@ nav ul li a:hover{
 .dateScroll{
     display: inline;
     text-decoration: none;
-    color: rgb(27, 27, 27);
+    color: #191919;
 }
 .newsScroll{
     display: inline;
@@ -100,7 +100,7 @@ nav ul li a:hover{
     box-sizing: border-box;
     text-transform: capitalize;
     font-weight: normal;
-    background: rgb(27, 27, 27);
+    background: #191919;
 }
 .container{
     display: grid;
@@ -126,7 +126,7 @@ nav ul li a:hover{
     padding-bottom: 10px;
 }
 .container .video-list{
-    background: rgb(27, 27, 27);
+    background: #191919;
     border-radius: 10px;
     height: 600px;
     overflow-y: scroll;
@@ -169,7 +169,7 @@ nav ul li a:hover{
 .gaming-content{
     width: 100%;
     height: 100vh;
-    background: rgb(27, 27, 27);
+    background: #191919;
     position: relative;
     justify-content: space-between;
 }
@@ -269,13 +269,28 @@ nav ul li a:hover{
     text-decoration: none;
     color: #d04a0b;
 }
+.rBtn{
+    position: absolute;
+    background-color: #ff0101;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 30px;
+    top: 5%;
+    right: 5%;
+}
+.rBtn:hover{
+    transform: scale(1.2);
+}
 
 
 /* MMO section */
 .MMO-Major{
     width: 100%;
     height: 100vh;
-    background: rgb(27, 27, 27);
+    background: #191919;
     position: relative;
     justify-content: space-between;
 }
@@ -322,13 +337,76 @@ nav ul li a:hover{
 }
 .MMObtn{
     position: absolute;
-    right: 20px;
-    border-radius: 20px;
+    right: 5%;
+    border-radius: 30px;
     background: #ff0101;
+    border: 2px solid transparent;
+    padding: 13px 30px;
+    font-weight: bold;
     color: #fff;
-    bottom: 60px;
+    bottom: 10%;
     width: 150px;
 }
 .MMObtn:hover{
     transform: scale(1.2);
+}
+
+/* About Me Section */
+.amTheCaptainNow{
+    width: 100%;
+    padding: 100px 0px;
+    background: #191919;
+}
+.myImg img{
+    height: auto;
+    width: 430px;
+}
+.aboutText{
+    width: 550px;
+}
+.myStory{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.aboutText h2{
+    color: #fff;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.aboutText h5{
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+.aboutText span{
+    color: #ff0101;
+}
+.aboutText p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+.aboutText button{
+    background-color: #ff0101;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .5s;
+}
+.aboutText button:hover{
+    background-color: transparent;
+    border: 2px solid #ff0101;
+    cursor: pointer;
 }

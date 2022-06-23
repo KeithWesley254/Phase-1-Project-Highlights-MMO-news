@@ -28,6 +28,7 @@ const epicImg = document.querySelector('.animeImg')
 const rFacts = document.querySelector('.rFacts')
 const rSubtopic = document.querySelector('.rSubtopic')
 const rTopic = document.querySelector('.rTopic')
+const rBtn = document.querySelector('.rBtn')
 
 
 //DOM Content Loaded
@@ -47,6 +48,10 @@ document.addEventListener('DOMContentLoaded',() => {
 
 AnimeImg()
 randomFacts()
+
+rBtn.addEventListener('click', () => {
+    randomFacts()
+})
 
 f2pGames()
 
@@ -85,8 +90,7 @@ function f2pGames(){
                 platform.textContent = gameDetails.platform
                 publisher.textContent = gameDetails.publisher
             }, 13000)
-    })
-	.catch(err => console.error(err));
+    }).catch(err => console.error(err));
 }
 //MMO news
 function myMMONews(){
@@ -102,6 +106,7 @@ function myMMONews(){
         .then(response => response.json())
         .then(mmoData => {
             console.log(mmoData[20])
+            //The scrolling news
             setInterval(function(){
                 const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
                 miniNews.textContent = mmoDetails.title
@@ -134,8 +139,7 @@ function myMMONews(){
                 linkArticle.href = mmoDetails.article_url
                 linkArticle.textContent = mmoDetails.article_url
             })
-        })
-        .catch(err => console.error(err));
+        }).catch(err => console.error(err));
 }
 
 //Anime Img
@@ -152,7 +156,7 @@ function AnimeImg(){
     .then(animeData => {
         const animeManeno = animeData.stuff[0]
             epicImg.src = animeManeno.image
-    }) .catch(err => console.error(err));
+    }).catch(err => console.error(err));
 }
 
 //Random Facts
@@ -172,6 +176,5 @@ function randomFacts(){
             rFacts.textContent = factsData[0].description
             rSubtopic.textContent = factsData[0].subtopic
             rTopic.textContent = factsData[0].topic
-        })
-        .catch(err => console.error(err));
+        }).catch(err => console.error(err));
 }
