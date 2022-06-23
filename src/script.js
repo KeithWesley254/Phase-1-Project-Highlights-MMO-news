@@ -33,8 +33,8 @@ const rBtn = document.querySelector('.rBtn')
 
 //DOM Content Loaded
 document.addEventListener('DOMContentLoaded',() => {
+    
     //Video Player Section
-
     myListedVideos.forEach(video => {
         video.onclick = () => {
             myListedVideos.forEach(vid => vid.classList.remove('active'))
@@ -49,12 +49,14 @@ document.addEventListener('DOMContentLoaded',() => {
 AnimeImg()
 randomFacts()
 
+//Button in random Facts section to let the user get another fact
 rBtn.addEventListener('click', () => {
     randomFacts()
 })
 
 f2pGames()
 
+//Gets the current date that will used in the scrolling date
 const currentDate = new Date();
 const dateToday = currentDate.getDate()+'/'+(currentDate.getMonth()+1)+'/'+currentDate.getFullYear()
 dateScroll.textContent = dateToday
@@ -92,6 +94,7 @@ function f2pGames(){
             }, 13000)
     }).catch(err => console.error(err));
 }
+
 //MMO news
 function myMMONews(){
     const options = {
@@ -119,6 +122,10 @@ function myMMONews(){
                 articleContent.innerHTML = mmoDetails.article_content
                 linkArticle.href = mmoDetails.article_url
                 linkArticle.textContent = mmoDetails.article_url
+
+            //setInterval was a consideration to make different news appear after a couple of seconds
+            //but I felt the user would want to change the story according to when they were ready.
+
             // setInterval(function(){
             //     const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
             //     // console.log(mmoDetails)

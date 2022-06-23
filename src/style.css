@@ -126,7 +126,7 @@ nav ul li a:hover{
     padding-bottom: 10px;
 }
 .container .video-list{
-    background: #191919;
+    background: #fff;
     border-radius: 10px;
     height: 600px;
     overflow-y: scroll;
