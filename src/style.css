@@ -213,10 +213,10 @@ nav ul li a:hover{
     color: rgb(245, 39, 39);
 }
 .listofgames h3{
-    color: #d04a0b;
+    color: #fff;
 }
 .listofgames p{
-    color: #fff;
+    color: #989d9f;
 }
 
 
@@ -249,10 +249,10 @@ nav ul li a:hover{
     overflow-y: scroll;
 }
 .epicgames p{
-    color: #fff;
+    color: #989d9f;
 }
 .epicgames h3{
-    color: #d04a0b;
+    color: #fff;
 }
 
 .EpicFree h2{
@@ -318,10 +318,10 @@ nav ul li a:hover{
     color: #fff;
 }
 .mmo-content h3{
-    color: #d04a0b;
+    color: #fff;
 }
 .mmo-content p{
-    color: #fff;
+    color: #989d9f;
 }
 .linkArticle{
     text-decoration: none;
@@ -359,7 +359,13 @@ nav ul li a:hover{
 }
 .myImg img{
     height: auto;
-    width: 430px;
+    width: 420px;
+    border-radius: 50px;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+}
+.myImg img:hover{
+    transform: rotateY(180deg);
 }
 .aboutText{
     width: 550px;
@@ -389,24 +395,75 @@ nav ul li a:hover{
     color: #ff0101;
 }
 .aboutText p{
-    color: #fcfc;
+    color: #989d9f;
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
     margin-bottom: 45px;
 }
-.aboutText button{
-    background-color: #ff0101;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid transparent;
+.aboutText a{
     font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff0101;
+    border: 2px solid transparent;
     padding: 13px 30px;
     border-radius: 30px;
     transition: .5s;
 }
-.aboutText button:hover{
+.aboutText a:hover{
     background-color: transparent;
     border: 2px solid #ff0101;
     cursor: pointer;
+}
+
+/* footer Section */
+footer{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer p:nth-child(1){
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+footer p:nth-child(2){
+    color: #fff;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+}
+.social{
+    display: flex;
+}
+.social a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff0101;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.social a:hover{
+    transform: scale(1.3);
+    transition: .5s;
+}
+.BigC{
+    position: absolute;
+    color: #ff0101;
+    bottom: 35px;
+    font-size: 15px;
 }
