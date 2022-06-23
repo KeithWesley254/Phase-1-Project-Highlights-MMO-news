@@ -4,11 +4,7 @@
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
 }
-@media screen and (max-width: 640px) {
-    .column {
-      width: 50%;
-  }
-}
+
 #Introduction{
     background: rgb(4, 4, 4);
 }
