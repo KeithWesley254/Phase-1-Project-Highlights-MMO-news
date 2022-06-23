@@ -7,12 +7,7 @@
 body{
     background: rgb(4, 4, 4);
 }
-#Introduction{
-    background: rgb(4, 4, 4);
-    width: 100%;
-    position: relative;
-    justify-content: space-between;
-}
+
 #MainTitle{
     text-align: center;
     padding-top: 15px;
