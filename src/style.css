@@ -186,7 +186,6 @@ nav ul li a:hover{
     width: 48%;
     height: 100%;
     background: rgb(0, 0, 0);
-    perspective: 1000px;
 }
 .free2play h2{
     text-align: center;
@@ -230,6 +229,7 @@ nav ul li a:hover{
 .animeImg{
     padding-top: 20%;
     height: 420px;
+    width: auto;
 }
 .EpicFree{
     position: absolute;
