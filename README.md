@@ -21,6 +21,7 @@ more interactivity to it so you can view the top weekly videos for example and g
 4. Facts by API-Ninjas by https://rapidapi.com/user/apininjas (API Ninjas Team)
 
 # Website link:
+https://keithwesley254.github.io/Phase-1-Project-Highlights-MMO-news/
 
 # Copyrights: 
 CopyRights by Keith Wesley

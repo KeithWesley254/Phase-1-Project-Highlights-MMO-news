@@ -8,6 +8,7 @@ body{
     background: rgb(4, 4, 4);
 }
 
+/* Navigation links and Title*/
 #MainTitle{
     text-align: center;
     padding-top: 15px;
@@ -60,6 +61,7 @@ nav ul li a:hover{
     transform: scale(1.2);
 }
 
+/* News Scrolling */
 .MainNews{
     display: flex;
     width: 100%;
@@ -96,6 +98,8 @@ nav ul li a:hover{
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
 }
+
+/* Video Section */
 .TopPlay{
     margin: 0; padding: 0;
     box-sizing: border-box;

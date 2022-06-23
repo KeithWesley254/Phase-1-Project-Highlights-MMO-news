@@ -8,6 +8,7 @@
 </head>
 <body>
     <section>
+        <!-- Top part of the page that holds the Navigation links and Title -->
         <h1 id="MainTitle">Video Gallery, Free Games and MMO updates</h1>
         <div class="Navlinks">
             <nav>
@@ -23,8 +24,10 @@
             </nav>
         </div>
     </section>
+    <!-- A small div for the news scrolling using the data from the MMO news API -->
     <div class="MainNews">
         <span class="newsMouth">GAMING NEWS</span>
+        <!-- Added and Event listener to hold the scrolling news and release to move it when done -->
         <marquee behavior="" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
             <div class="newsScroll">
                 <p class="dateScroll">DD/MM/YYYY</p>
@@ -32,6 +35,7 @@
             </div>
         </marquee>
     </div>
+    <!-- My Video Playlist and videos in waiting -->
     <section class="TopPlay">
         <div class="container">
             <div class="main-video">
@@ -64,8 +68,10 @@
             </div>
         </div>
     </section>
+    <!-- A section containing Free Games and Random Facts -->
     <section class="gaming-content">
         <div class="EpicFree">
+            <!-- Random Facts -->
             <h2>Random Facts<span class="newsSpan"> & Quotes</span></h2>
             <div class="epicgames">
                 <img class="animeImg" src="#" alt="Requesting for the SAUCCEEEE...">
@@ -80,6 +86,7 @@
                 <button type="button" class="rBtn">Next Fact</button>
             </div>
         </div>
+        <!-- Free Games -->
         <div class="free2play">
             <h2 id="f2pgames">Free2Play<span class="f2p"> Games</span></h2>
             <div class="listofgames">
@@ -109,6 +116,7 @@
             </div>
         </div>
     </section>
+    <!-- MMO news section using innerHTML from an API-->
     <section class="MMO-Major">
         <div class="mmo-news">
             <h2 id="mmoNews">MMO<span class="newsSpan"> News</span></h2>
@@ -130,6 +138,7 @@
             <button class="MMObtn">Next Story</button>
         </div>
     </section>
+    <!-- A section about me, the Author -->
     <section class="amTheCaptainNow">
         <div class="myStory">
             <div class="myImg">
@@ -151,6 +160,7 @@
             </div>
         </div>
     </section>
+    <!-- My social Media links -->
     <footer id="socials">
         <p>Keith Wesley</p>
         <p>You can support me by subscribing to my Youtube channel down below or donating to my Patreon</p>
