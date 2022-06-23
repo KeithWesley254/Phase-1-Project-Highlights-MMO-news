@@ -8,7 +8,8 @@
 #Introduction{
     background: rgb(4, 4, 4);
     width: 100%;
-    height: 20vh;
+    position: relative;
+    justify-content: space-between;
 }
 #MainTitle{
     text-align: center;
@@ -55,7 +56,7 @@ nav ul li a:hover{
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
-    padding: 10px 25px;
+    padding: 5px 20px;
     border-radius: 30px;
 }
 .donate:hover{
