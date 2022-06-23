@@ -378,10 +378,10 @@ nav ul li a:hover{
     transform: rotateY(180deg);
 }
 .aboutText{
-    width: 550px;
+    width: 50%;
 }
 .myStory{
-    width: 1130px;
+    width: 80%;
     max-width: 95%;
     margin: 0 auto;
     display: flex;
