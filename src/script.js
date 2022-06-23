@@ -105,16 +105,16 @@ function myMMONews(){
                 const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
                 miniNews.textContent = mmoDetails.title
             }, 30000)
-            // setInterval(function(){
-            //     const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
-            //     // console.log(mmoDetails)
-            //     mmoNewsTitle.textContent = mmoDetails.title
-            //     mmoImg.src = mmoDetails.thumbnail
-            //     mmoDescription.textContent = mmoDetails.short_description
-            //     articleContent.innerHTML = mmoDetails.article_content
-            //     linkArticle.href = mmoDetails.article_url
-            //     linkArticle.textContent = mmoDetails.article_url
-            // }, 50000)
+            setInterval(function(){
+                const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
+                // console.log(mmoDetails)
+                mmoNewsTitle.textContent = mmoDetails.title
+                mmoImg.src = mmoDetails.thumbnail
+                mmoDescription.textContent = mmoDetails.short_description
+                articleContent.innerHTML = mmoDetails.article_content
+                linkArticle.href = mmoDetails.article_url
+                linkArticle.textContent = mmoDetails.article_url
+            }, 50000)
         })
         .catch(err => console.error(err));
 }
