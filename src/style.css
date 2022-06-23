@@ -4,7 +4,9 @@
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
 }
-
+body{
+    background: rgb(4, 4, 4);
+}
 #Introduction{
     background: rgb(4, 4, 4);
     width: 100%;
