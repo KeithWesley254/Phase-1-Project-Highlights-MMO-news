@@ -217,6 +217,9 @@ nav ul li a:hover{
 }
 .listofgames p{
     color: #989d9f;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
 }
 
 
@@ -250,6 +253,9 @@ nav ul li a:hover{
 }
 .epicgames p{
     color: #989d9f;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
 }
 .epicgames h3{
     color: #fff;
@@ -322,6 +328,9 @@ nav ul li a:hover{
 }
 .mmo-content p{
     color: #989d9f;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
 }
 .linkArticle{
     text-decoration: none;
