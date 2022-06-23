@@ -108,7 +108,7 @@ function myMMONews(){
     fetch('https://mmo-games.p.rapidapi.com/latestnews', options)
         .then(response => response.json())
         .then(mmoData => {
-            console.log(mmoData[20])
+            // console.log(mmoData[20])
             //The scrolling news
             setInterval(function(){
                 const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
@@ -179,7 +179,7 @@ function randomFacts(){
     fetch('https://random-facts4.p.rapidapi.com/get', options)
         .then(response => response.json())
         .then(factsData => {
-            console.log(factsData)
+            // console.log(factsData)
             rFacts.textContent = factsData[0].description
             rSubtopic.textContent = factsData[0].subtopic
             rTopic.textContent = factsData[0].topic
