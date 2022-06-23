@@ -22,6 +22,7 @@ const mmoImg = document.querySelector('.mmoImg')
 const mmoDescription = document.querySelector('.mmoDescription')
 const articleContent = document.querySelector('.articleContent')
 const linkArticle = document.querySelector('.linkArticle')
+const MMObtn = document.querySelector('.MMObtn')
 
 const epicImg = document.querySelector('.animeImg')
 const rFacts = document.querySelector('.rFacts')
@@ -105,7 +106,25 @@ function myMMONews(){
                 const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
                 miniNews.textContent = mmoDetails.title
             }, 30000)
-            setInterval(function(){
+            const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
+                // console.log(mmoDetails)
+                mmoNewsTitle.textContent = mmoDetails.title
+                mmoImg.src = mmoDetails.thumbnail
+                mmoDescription.textContent = mmoDetails.short_description
+                articleContent.innerHTML = mmoDetails.article_content
+                linkArticle.href = mmoDetails.article_url
+                linkArticle.textContent = mmoDetails.article_url
+            // setInterval(function(){
+            //     const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
+            //     // console.log(mmoDetails)
+            //     mmoNewsTitle.textContent = mmoDetails.title
+            //     mmoImg.src = mmoDetails.thumbnail
+            //     mmoDescription.textContent = mmoDetails.short_description
+            //     articleContent.innerHTML = mmoDetails.article_content
+            //     linkArticle.href = mmoDetails.article_url
+            //     linkArticle.textContent = mmoDetails.article_url
+            // }, 50000)
+            MMObtn.addEventListener('click', function(){
                 const mmoDetails = mmoData[Math.floor(Math.random()*mmoData.length)]
                 // console.log(mmoDetails)
                 mmoNewsTitle.textContent = mmoDetails.title
@@ -114,7 +133,7 @@ function myMMONews(){
                 articleContent.innerHTML = mmoDetails.article_content
                 linkArticle.href = mmoDetails.article_url
                 linkArticle.textContent = mmoDetails.article_url
-            }, 50000)
+            })
         })
         .catch(err => console.error(err));
 }
